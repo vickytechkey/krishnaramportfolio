@@ -1,0 +1,210 @@
+:root{
+    --background: #ffffff;
+    --primary_color: #faa51b;
+    --secondary_color: rgb(128, 128, 128);
+}
+
+.proj{
+    display: grid;
+    justify-items: center;
+}
+
+.project_into{
+    display: grid;
+    gap: 0.5rem;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.project_into h1{
+    font-weight: 300;
+}
+
+.project_into p{
+    margin-top: 5rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--secondary_color);
+}
+
+.project{
+    display: grid;
+    gap: 4rem;
+    width: 50%;
+    justify-items: center;
+    margin-bottom:48px;
+}
+
+.Best_works, .Best_works1{
+    font-size: 50px;
+}
+
+.Best_works1{
+    color: var(--primary_color);
+}
+
+.project_card{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    padding: 2%;
+    border-radius: 10px;
+    border: 1px solid var(--secondary_color);
+    transition: .5s;
+}
+
+.project_card:hover{
+    box-shadow: 0px 4px 4px 0px rgb(128, 128, 128, .5);
+}
+
+.project_card .project_image{
+    width: 100%;
+    height: 50vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.project_card .project_image img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project_card .project_details{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.project_card .project_details h1{
+    margin-bottom: 10px;
+}
+
+.project_card .project_details span{
+    opacity: .5;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.project_card .project_details .Project_file_buttons{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.project_details .Project_file_buttons button{
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary_color);
+    color: white;
+}
+
+.project_details .Project_file_buttons button:hover{
+    cursor: pointer;
+    background-color: #4f4f4f;
+}
+
+.other_works{
+    margin: 2%;
+    width: 96%;
+    display: grid;
+    justify-content: center;
+}
+
+.other_works a{
+    display: block;
+    width: 100%;
+}
+
+.other_works a button{
+    width: 50vw;
+    height: 50px;
+    background-color: var(--secondary_color);
+    color: var(--background);
+    border: none;
+}
+
+@media all and (max-width: 1300px){
+
+    .project_card .project_details{
+        display: grid;
+        grid-template-rows: 1fr .2fr;
+    }
+    
+}
+
+@media all and (max-width: 800px){
+
+    .project{
+        gap: 4rem;
+        width: 80%;
+        padding: 0%;
+        margin: 5% auto;
+    }
+
+    .project_into{
+        gap: 0.5rem;
+        width: 80%;
+        padding: 0%;
+        margin: 5% auto;
+    }
+
+    .project_card{
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 1rem;
+        border-radius: 10px;
+        border: 1px solid var(--secondary_color);
+        transition: .5s;
+    }
+
+    .project_card .project_image{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .project_card .project_image img{
+        width: 100%;
+        height: 30vh;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .project_card .project_details{
+        grid-template-rows: 1fr .5fr;
+    }
+    
+    .project_details .Project_file_buttons{
+        width: 100%;
+    }
+
+    .other_works a button{
+        width: 80vw;
+    }
+
+}
+
+@media all and (max-width: 360px){
+    .project_into p{
+        margin-top: 2rem;
+    }
+    .project_card .project_details .Project_file_buttons{
+        gap: 5px;
+    }
+}
+
+@media all and (max-width: 300px) {
+    .project_card .project_details .Project_file_buttons button{
+        height: 56px;
+    }
+}
